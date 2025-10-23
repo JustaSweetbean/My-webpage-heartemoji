@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Quicksand:wght@300..700&display=swap');
 
 :root {
-    --primary-bg-color: #ECC3A5;
+    --primary-bg-color: #ffe2f6;
     --text-color: #2B181E;
     --title-color: #a65665;
     --complementary-one: #C8A8B6;
@@ -83,7 +83,7 @@ h1 {
 
 .buttons__subtitle {
     font-family: var(--titulo-font);
-    font-size: 2rem;
+    font-size: 3rem;
     font-weight: 400;
 }
 
@@ -111,7 +111,18 @@ h1 {
 
 .presentación__imagen {
     width:40%;
-    border: .5rem solid #D88084;
+    border: 0.5rem solid #D88084;
+}
+
+.presentación__imagen2 {
+    width: 20%;
+    position:absolute; 
+    /* Anchor the image to the top edge */
+    top:9%;
+    /* Anchor the image to the left edge */
+    left: 0;
+    /*Ensure it stays above other content */
+    z-index: 1000;
 }
 
 .footer {
