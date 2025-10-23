@@ -1,39 +1,66 @@
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Quicksand:wght@300..700&display=swap');
 
+:root {
+    --primary-bg-color: #ECC3A5;
+    --text-color: #2B181E;
+    --title-color: #a65665;
+    --complementary-one: #C8A8B6;
+    --complementary-two: #D88084;
+    --titulo-font: "Dancing Script", cursive;
+    --paragraph-font: "Quicksand", sans-serif
+}
+
 * {
     padding: 0;
     margin: 0;
+
+.header {
+    background-color: var(--complementary-one);
+    padding: 1.5% 0% 1.5% 15%;
 }
+
+.header__menu {
+    display: flex;
+    gap: 80px;
+}
+
+.header__link {
+    font-family: var(--paragraph-font);
+    font-weight: 600;
+    text-decoration: none;
+    font-size: 1.6rem;
+}
+
 body {
-    background-color: #F3C8DD;
-    color: #34345B;
+    background-color: var(--primary-bg-color);
+    color: var(--text-color);
     height: 100vh;
     box-sizing: border-box;
 }
 
 h1 {
-    color: #712F79;
-    font-size: 80px;
+    color: var(--title-color);
+    font-size: 3rem;
 }
 .titulo_destaque {
-    color: #7590BB;
+    color: var(--complementary-two);
 }
 .contenido{
     display: flex;
-    align-items: center;
-    margin: 10%;
+    align-items:center;
+    margin: 7%;
     justify-content: space-between;
 }
 
 .contenido__presentacion{
-    width: 615px;
-    font-family: "Quicksand", sans-serif;
+    width: 600px;
+    font-family: var(--paragraph-font);
     font-weight: 500;
 }
 
 .contenido__presentacion__titulo{
     font-size: 80px;
-    font-family: "Dancing Script", cursive;
+    font-family: var(--titulo-font);
 }
 .contenido__presentacion__parrafo{
     font-size: 24px;
@@ -42,18 +69,33 @@ h1 {
 .buttons{
     display: flex;
     justify-content: space-between;
+    padding-top: 4%;
 }
 
-.button_style{
+.button_style {
     width: 280px;
-    background-color:#7590BB;
+    background-color:var(--complementary-one);
     text-align: center;
     padding: 21.5px 0;
     border-radius: 16px;
     border-style: dashed;
-    border-color: #712F79;
-    font-family: "Quicksand", sans-serif;
+    border-color: var(--complementary-two);
+    font-family: var(--paragraph-font);
     font-size: 20px;
-    color:#34345B;
+    color:var(--text-color);
     text-decoration: none;
+}
+
+.footer {
+    background-color: var(--complementary-two);
+    padding: 1.5% 0% 1.5% 15%;
+}
+
+.footer__content{
+    text-align:left;
+    font-family: var(--paragraph-font);
+    font-weight: 400;
+    font-size: 1rem;
+}
+
 }
