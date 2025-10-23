@@ -34,68 +34,114 @@
 body {
     background-color: var(--primary-bg-color);
     color: var(--text-color);
-    height: 100vh;
     box-sizing: border-box;
 }
 
 h1 {
     color: var(--title-color);
-    font-size: 3rem;
+    font-size: 5rem;
 }
+
 .titulo_destaque {
     color: var(--complementary-two);
 }
+
 .contenido{
     display: flex;
     align-items:center;
-    margin: 7%;
+    padding: 6% 15%;
     justify-content: space-between;
+    align-items: center;
+    gap: 20px;
 }
 
 .contenido__presentacion{
-    width: 600px;
-    font-family: var(--paragraph-font);
-    font-weight: 500;
+    width: 50%;
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    gap: 40px;
 }
 
 .contenido__presentacion__titulo{
-    font-size: 80px;
+    font-size: 4rem;
     font-family: var(--titulo-font);
 }
 .contenido__presentacion__parrafo{
-    font-size: 24px;
+    font-size: 1.5rem; 
+    font-family: var(--paragraph-font);
+    font-weight: 500;
 }
 
 .buttons{
     display: flex;
     justify-content: space-between;
-    padding-top: 4%;
+    flex-direction: column;
+    align-items: center;
+    gap: 32px;
+}
+
+.buttons__subtitle {
+    font-family: var(--titulo-font);
+    font-size: 2rem;
+    font-weight: 400;
 }
 
 .button_style {
-    width: 280px;
-    background-color:var(--complementary-one);
+    width: 50%;
     text-align: center;
-    padding: 21.5px 0;
-    border-radius: 16px;
-    border-style: dashed;
-    border-color: var(--complementary-two);
-    font-family: var(--paragraph-font);
-    font-size: 20px;
-    color:var(--text-color);
+    border-radius: 8px;
+    font-size: 1.5rem; 
+    font-weight: 600;
+    padding: 15px 0;       
+    display: flex;
+    justify-content: center;
     text-decoration: none;
+    color: var(--text-color); 
+    font-family: var(--paragraph-font);          
+    background-color:var(--complementary-one);
+    border: 2px dashed var(--complementary-two);
+    gap: 10px;
+}
+
+/* changes button colour when the cursor is on */
+.button_style:hover {
+    background-color: var(--complementary-two);
+}
+
+.presentación__imagen {
+    width:40%;
+    border: .5rem solid #D88084;
 }
 
 .footer {
-    background-color: var(--complementary-two);
-    padding: 1.5% 0% 1.5% 15%;
-}
-
-.footer__content{
-    text-align:left;
+    background-color: var(--complementary-one);
+    padding: 1.5rem;
     font-family: var(--paragraph-font);
-    font-weight: 400;
+    font-weight: 500;
     font-size: 1rem;
+    text-align: left;
 }
 
+/* to adjust page for diferent screen sizes  */  
+
+@media (max-width:1100px) {
+    .header{
+        padding: 10%;
+    }
+
+    .header__menu{
+        justify-content: center;
+    }
+
+    .contenido{
+        flex-direction: column-reverse;
+        padding: 5%;
+    }
+
+    .contenido__presentacion{
+        width: auto;
+    }
+}
+ 
 }
